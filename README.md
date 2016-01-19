@@ -1,2 +1,2 @@
 # omx-simple-interface
-A simple python interface for OMXPlayer
+A simple Python interface for OMXPlayer
