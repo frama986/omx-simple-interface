@@ -7,7 +7,7 @@ I created this simple interface for OMXPlayer as a case study to learn Python an
 #####Requirement
 * This application is written for Phyton 3.4
 * OMXPlayer ([https://github.com/huceke/omxplayer](huceke/omxplayer))
-* Give the write permissions to the project folder: the application has to create the recent videos' file.
+* Assign the write permissions to the project folder: the application has to create the recent videos' file.
 
 
 #####Start the application
