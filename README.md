@@ -2,7 +2,7 @@
 ###A simple interface for OMXPlayer written in Python
 
 This is my first Phyton project and i decided to share it with everyone.
-I created this simple interface for OMXPlayer as case study to learn Python and, obviously, to semplify the selection of videos.
+I created this simple interface for OMXPlayer as a case study to learn Python and, obviously, to semplify the selection of videos.
 
 #####Requirement
 * This application is written for Phyton 3.4
