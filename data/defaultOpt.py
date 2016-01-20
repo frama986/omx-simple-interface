@@ -1,7 +1,7 @@
 ### General Default
 
 # Browsing initial dir (if recent videos file's is empty)
-def_initialDir='/Users/francescomalatto/'
+def_initialDir='/'
 
 # File to store recent videos (extension must be .xml)
 def_recentFile = './data/recent_files.xml'
@@ -10,7 +10,7 @@ def_recentFile = './data/recent_files.xml'
 def_maxRecentVideos = 10
 
 # Language
-def_lang = 'it'
+def_lang = 'en'
 
 # Omx player additional options (add a blank space at the end)
 def_moreOptions = ''
