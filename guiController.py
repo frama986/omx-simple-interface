@@ -142,12 +142,11 @@ class OmxGui(Frame):
          
          self.logDebug(cmdStr)
          self.playProcess = Popen(['bash', '-c', cmdStr], stdin=PIPE, bufsize = 1)
-         self.parent.after(5000, lambda: self.parent.focus_force())
+         self.parent.focus_force()
    
    def keyEvt(self, event):
       self.logDebug('char: ' + event.char + ' --- key simbol: ' + event.keysym + ' ---  key code: ' + str(event.keycode))
-      #if self.playProcess is not None and self.playProcess.stdin.closed is not True:
-      if self.playProcess is not None and self.checkProcessPipe():
+      if self.playProcess is not None:
          # right
          if event.keysym == 'Right':
             self.playProcess.stdin.write(bytes('^[[C', 'UTF-8'))
@@ -165,20 +164,15 @@ class OmxGui(Frame):
             self.playProcess = None
          else:
             self.playProcess.stdin.write(bytes(event.char, 'UTF-8'))
-         self.playProcess.stdin.flush()
-         self.parent.focus_force()
-   
-   def checkProcessPipe(self):
-      try:
-         self.playProcess.stdin.read()
-         return True
-      except IOError:
          try:
-            self.playProcess.stdin.close()
+            self.playProcess.stdin.flush()
          except IOError:
-            pass
-      self.playProcess = None
-      return False
+            try:
+               self.playProcess.stdin.close()
+               self.playProcess = None
+            except IOError:
+               self.playProcess = None
+         self.parent.focus_force()
    
    def logDebug(self, msg):
       if isDebug and msg is not None:
