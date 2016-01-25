@@ -11,7 +11,9 @@ I created this simple interface for OMXPlayer as a case study to learn Python an
 
 
 #####Start the application
-Launch osiMain.py file:
+* Launch the shell
+* go into the omx-simple-interface folder
+* run osiMain.py file using
 
 `./osiMain`
 
