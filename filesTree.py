@@ -105,7 +105,7 @@ class FilesTree(Treeview):
          
          td = datetime.today()
          lastFile = self.initLastFile()
-         lastFile['id'] = td.timestamp()
+         lastFile['id'] = td.strftime("%Y%m%d%H%M%S%f")
          lastFile['fullpath'] = fullpath
          lastFile['filepath'] = pathMod.dirname(fullpath)
          lastFile['filename'] = pathMod.basename(fullpath)
