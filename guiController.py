@@ -118,11 +118,11 @@ class OmxGui(Frame):
       self.filesTree.clearRecentVideos()
 
    def updateRecentVideos(self, fullpath):
-      self.filesTree.updateRecentVideos(fullpath)
+      return self.filesTree.updateRecentVideos(fullpath)
 
    def updateAndPlayVideo(self, fullpath):
-      self.updateRecentVideos(fullpath)
-      self.playVideo()
+      if self.updateRecentVideos(fullpath):
+         self.playVideo()
 
    def openVideo(self):
       fullpath = fileDialog.askopenfilename(

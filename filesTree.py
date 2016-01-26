@@ -57,6 +57,7 @@ class FilesTree(Treeview):
          self._addFile(videoId, title, lastOpen)
       
       self.browseInitialDir = filepath
+      self.controller.browseInitialDir = filepath
       
       video = recentVideosRoot.find('./film[last()]')
       lastFile = self.lastFile
@@ -123,6 +124,8 @@ class FilesTree(Treeview):
          self.recentVideos.write(self.recentFile)
          
          self.browseInitialDir = lastFile['filepath']
+         
+         return True
 
    def selectVideo(self, event):
       videoId = self.identify_row(event.y)
