@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=OMX Simple Interface
+Comment=OMXPlayer simple interface
+Comment[it]=Semplice interfaccia per OMXPlayer
+Exec=/home/pi/Desktop/omx-simple-interface/start.sh %f
+Icon=video
+Terminal=false
+Type=Application
