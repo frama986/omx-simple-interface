@@ -2,8 +2,8 @@
 Name=OMX Simple Interface
 Comment=OMXPlayer simple interface
 Comment[it]=Semplice interfaccia per OMXPlayer
-Exec=/usr/share/osi/start.sh %f
+Exec=/usr/share/omxsi/start.sh %f
 Icon=video
 Terminal=false
 Type=Application
-Categories=GTK;Utility;Application;
+Categories=Utility;Application;

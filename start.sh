@@ -1,2 +1,3 @@
-cd /home/pi/Desktop/omx-simple-interface/
+cd /usr/share/omxsi/
+
 python3 osiMain.py $1
