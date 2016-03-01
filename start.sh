@@ -1,3 +1,5 @@
 cd /usr/share/omxsi/
 
-python3 osiMain.py $1
+pkill -f python3\ osiMain.py
+
+python3 osiMain.py "$1"
